@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealStateApp", "src\RealStateApp\RealStateApp\RealStateApp.csproj", "{82079828-E9C8-43E2-AF8D-DE112EF137F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealStateApp.Client", "src\RealStateApp\RealStateApp.Client\RealStateApp.Client.csproj", "{0AC24DFD-F00C-49B4-9DFF-62C4F3CAD0DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealStateApp.Application", "src\RealStateApp.Application\RealStateApp.Application.csproj", "{CDC9312E-D921-4863-AD67-2E39E8878A5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealStateApp.Domain", "src\RealStateApp.Domain\RealStateApp.Domain.csproj", "{4046F846-5DC6-41D4-8CFC-BE0DD299593A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealStateApp.Persistence", "src\RealStateApp.Data\RealStateApp.Persistence.csproj", "{E7D0B9B6-913E-4846-9494-606824E84D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealStateApp.Infra", "src\RealStateApp.Infra\RealStateApp.Infra.csproj", "{0DC4C7E1-8BE0-43E3-9050-CE5386A28FE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82079828-E9C8-43E2-AF8D-DE112EF137F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82079828-E9C8-43E2-AF8D-DE112EF137F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82079828-E9C8-43E2-AF8D-DE112EF137F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82079828-E9C8-43E2-AF8D-DE112EF137F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC24DFD-F00C-49B4-9DFF-62C4F3CAD0DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC24DFD-F00C-49B4-9DFF-62C4F3CAD0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC24DFD-F00C-49B4-9DFF-62C4F3CAD0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC24DFD-F00C-49B4-9DFF-62C4F3CAD0DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC9312E-D921-4863-AD67-2E39E8878A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC9312E-D921-4863-AD67-2E39E8878A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC9312E-D921-4863-AD67-2E39E8878A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC9312E-D921-4863-AD67-2E39E8878A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4046F846-5DC6-41D4-8CFC-BE0DD299593A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4046F846-5DC6-41D4-8CFC-BE0DD299593A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4046F846-5DC6-41D4-8CFC-BE0DD299593A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4046F846-5DC6-41D4-8CFC-BE0DD299593A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D0B9B6-913E-4846-9494-606824E84D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D0B9B6-913E-4846-9494-606824E84D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D0B9B6-913E-4846-9494-606824E84D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D0B9B6-913E-4846-9494-606824E84D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC4C7E1-8BE0-43E3-9050-CE5386A28FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC4C7E1-8BE0-43E3-9050-CE5386A28FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC4C7E1-8BE0-43E3-9050-CE5386A28FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC4C7E1-8BE0-43E3-9050-CE5386A28FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE71F27A-EDB7-49B9-B132-0F79396BE372}
+	EndGlobalSection
+EndGlobal
