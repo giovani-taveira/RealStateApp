@@ -1,0 +1,31 @@
+﻿@page "/condominium-type"
+@rendermode InteractiveServer
+
+<PageTitle>Tipos Condomínios | RealStateApp</PageTitle>
+<MudText Typo="Typo.h4" GutterBottom="true">Tipos de Condomínios</MudText>
+
+<MudTable Items="@ViewModel.CondominiumTypes" Dense="false" Hover="true" Bordered="false" Striped="false" Breakpoint="Breakpoint.None">
+    <ToolBarContent>
+        <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" Size="Size.Small" @onclick="@(() => NewCondominiumType())" />
+        <MudSpacer />
+        <MudTextField @bind-Value="ViewModel.SearchString" Placeholder="Buscar" Adornment="Adornment.Start" Immediate="true" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>Id</MudTh>
+        <MudTh>Nome</MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="@context.Name">@context.Id</MudTd>
+        <MudTd DataLabel="@context.Name">@context.Name</MudTd>
+        <MudTd Style="width: 0px;">
+            <MudMenu Icon="@Icons.Material.Filled.MoreVert" Style="align-self: auto;" Size="Size.Small" AnchorOrigin="Origin.BottomLeft">
+                <MudMenuItem Icon="@Icons.Material.Filled.Edit" Style="align-self: auto;" OnTouch="(() => EditCondominiumType(context.Id))" OnClick="(() => EditCondominiumType(context.Id))">Editar</MudMenuItem>
+                <MudMenuItem Icon="@Icons.Material.Filled.Delete" Style="align-self: auto;" OnTouch="(() => DeleteCondominiumType(context.Id))" OnClick="(() => DeleteCondominiumType(context.Id))">Deletar</MudMenuItem>
+            </MudMenu>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+</MudTable>

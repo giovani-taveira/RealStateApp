@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealStateApp.Persistence", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealStateApp.Infra", "src\RealStateApp.Infra\RealStateApp.Infra.csproj", "{0DC4C7E1-8BE0-43E3-9050-CE5386A28FE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealStateApp", "src\RealStateApp\RealStateApp.csproj", "{BB255336-045D-4E70-AB3F-A0CA1CB3EA52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealStateApp", "src\RealStateApp\RealStateApp.csproj", "{BB255336-045D-4E70-AB3F-A0CA1CB3EA52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

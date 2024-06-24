@@ -1,9 +1,6 @@
-using FluentValidation;
 using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
-using RealStateApp.Application.Validations;
-using RealStateApp.Application.ViewModels;
 using RealStateApp.Configuration;
 using RealStateApp.Persistence;
 
@@ -23,8 +20,7 @@ builder.Services.AddMudServices();
 builder.Services.AddApplicationServices();
 builder.Services.AddRepositoryServices();
 builder.Services.AddViewModelServices();
-
-builder.Services.AddTransient<IValidator<PropertyTypeViewModel>, PropertyTypeValidator>();
+builder.Services.AddValidatorServices();
 
 var app = builder.Build();
 

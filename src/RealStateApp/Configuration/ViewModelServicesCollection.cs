@@ -7,6 +7,7 @@ namespace RealStateApp.Configuration
         public static void AddViewModelServices(this IServiceCollection services)
         {
             services.AddScoped<PropertyTypeViewModel>();
+            services.AddScoped<CondominiumTypeViewModel>();
         }
     }
 }
