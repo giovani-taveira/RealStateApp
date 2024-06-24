@@ -1,0 +1,31 @@
+﻿@page "/property-type"
+@rendermode InteractiveServer
+
+<PageTitle>Tipos Propriedades | RealStateApp</PageTitle>
+<MudText Typo="Typo.h4" GutterBottom="true">Tipos de Propriedades</MudText>
+
+<MudTable Items="@ViewModel.PropertyTypes" Dense="false" Hover="true" Bordered="false" Striped="false" Breakpoint="Breakpoint.None">
+    <ToolBarContent>
+        <MudFab Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" Size="Size.Small" @onclick="@(() => NewPropertyType())" />
+        <MudSpacer />
+        <MudTextField @bind-Value="ViewModel.SearchString" Placeholder="Buscar" Adornment="Adornment.Start" Immediate="true" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>Id</MudTh>
+        <MudTh>Nome</MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="@context.Name">@context.Id</MudTd>
+        <MudTd DataLabel="@context.Name">@context.Name</MudTd>
+        <MudTd Style="width: 0px;">
+            <MudMenu Icon="@Icons.Material.Filled.MoreVert" Style="align-self: auto;" Size="Size.Small" AnchorOrigin="Origin.BottomLeft" >
+                <MudMenuItem Icon="@Icons.Material.Filled.Edit" Style="align-self: auto;" OnTouch="(() => EditPropertyType(context.Id))" OnClick="(() => EditPropertyType(context.Id))">Editar</MudMenuItem>
+                <MudMenuItem Icon="@Icons.Material.Filled.Delete" Style="align-self: auto;" OnTouch="(() => DeletePropertyType(context.Id))" OnClick="(() => DeletePropertyType(context.Id))">Deletar</MudMenuItem>
+            </MudMenu>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+</MudTable>

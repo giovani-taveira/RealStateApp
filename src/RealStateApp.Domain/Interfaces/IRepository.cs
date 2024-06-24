@@ -6,11 +6,11 @@ namespace RealStateApp.Domain.Entities
     {
         Task<TEntity> Create(TEntity entity);
         Task<IEnumerable<TEntity>> CreateRange(IEnumerable<TEntity> entities);
-        Task<TEntity> Update(TEntity entity);
-        Task UpdateRange(IEnumerable<TEntity> entities);
-        Task Delete(TEntity entity);
-        IQueryable<TEntity> GetAll();
+        Task<bool> Update(TEntity entity);
+        Task<bool> UpdateRange(IEnumerable<TEntity> entities);
+        Task<bool> Delete(TEntity entity);
+        Task<List<TEntity>> GetAll();
         Task<TEntity> GetById(int Id);
-        IQueryable<TEntity> Search(Expression<Func<TEntity, bool>> predicado);
+        Task<IEnumerable<TEntity>> Search(Expression<Func<TEntity, bool>> predicado);
     }
 }

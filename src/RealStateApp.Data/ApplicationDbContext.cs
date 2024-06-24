@@ -10,12 +10,12 @@ namespace RealStateApp.Persistence
 
 
         #region DbSets
-        public DbSet<Address> Sections { get; set; }
-        public DbSet<Condominium> DataRecords { get; set; }
-        public DbSet<CondominiumCharacteristics> DataRecordRows { get; set; }
-        public DbSet<CondominiumType> DataRecordColumns { get; set; }
-        public DbSet<Property> DataRecordValues { get; set; }
-        public DbSet<PropertyType> Users { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Condominium> Condominiums { get; set; }
+        public DbSet<CondominiumCharacteristic> CondominiumCharacteristics { get; set; }
+        public DbSet<CondominiumType> CondominiumTypes { get; set; }
+        public DbSet<Property> Properties { get; set; }
+        public DbSet<PropertyType> PropertyTypes { get; set; }
         #endregion
 
 

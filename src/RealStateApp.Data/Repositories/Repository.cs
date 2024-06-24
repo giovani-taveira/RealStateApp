@@ -27,23 +27,25 @@ namespace RealStateApp.Persistence.Repositories
             return entities;
         }
 
-        public async Task<TEntity> Update(TEntity entity)
+        public async Task<bool> Update(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return entity;
+            int result = await _context.SaveChangesAsync();
+            return result > 0;
         }
 
-        public async Task UpdateRange(IEnumerable<TEntity> entities)
+        public async Task<bool> UpdateRange(IEnumerable<TEntity> entities)
         {
             _context.Set<TEntity>().UpdateRange(entities);
-            await _context.SaveChangesAsync();
+            int result = await _context.SaveChangesAsync();
+            return result > 0;
         }
 
-        public async Task Delete(TEntity entity)
+        public async Task<bool> Delete(TEntity entity)
         {
             _context.Set<TEntity>().Remove(entity);
-            await _context.SaveChangesAsync();
+            int result = await _context.SaveChangesAsync();
+            return result > 0;
         }
 
         public async Task<TEntity> GetById(int Id)
@@ -51,16 +53,17 @@ namespace RealStateApp.Persistence.Repositories
             return await _context.Set<TEntity>().FindAsync(Id);
         }
 
-        public IQueryable<TEntity> GetAll()
+        public async Task<List<TEntity>> GetAll()
         {
-            return _context.Set<TEntity>().AsQueryable();
+            return await _context.Set<TEntity>()
+                        .ToListAsync();
         }
 
-        public IQueryable<TEntity> Search(Expression<Func<TEntity, bool>> predicado)
+        public async Task<IEnumerable<TEntity>> Search(Expression<Func<TEntity, bool>> predicado)
         {
-            return _context.Set<TEntity>()
+            return await _context.Set<TEntity>()
                            .Where(predicado)
-                           .AsQueryable();
+                           .ToListAsync();
         }
     }
 }

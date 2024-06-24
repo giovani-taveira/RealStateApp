@@ -4,9 +4,9 @@ using RealStateApp.Domain.Entities;
 
 namespace RealStateApp.Persistence.Mappings
 {
-    public sealed class CondominiumCharacteristicsMapping : IEntityTypeConfiguration<CondominiumCharacteristics>
+    public sealed class CondominiumCharacteristicsMapping : IEntityTypeConfiguration<CondominiumCharacteristic>
     {
-        public void Configure(EntityTypeBuilder<CondominiumCharacteristics> builder)
+        public void Configure(EntityTypeBuilder<CondominiumCharacteristic> builder)
         {
             builder.HasKey(x => x.Id);
 
